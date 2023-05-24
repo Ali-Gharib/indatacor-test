@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/prismjs/themes/prism-coy.css";
+@import "assets/demo/flags/flags.css";
+@import "assets/demo/documentation.scss";
+@import "assets/sass/layout/_variables";
+@import "assets/sass/layout/_layout";
+@import "assets/sass/overrides/_overrides";
+
+input,select,button,p-dropdown,button.p-element.p-ripple,.p-dropdown,.togle-button {
+    height:37px !important;
+}
+.togle-button{
+    border-radius: 8px !important;
+}
+.my-bg-yellow{
+    background-color: #EAB308 !important;
+}
+button.p-inputnumber-button{
+    height:auto !important;
+}
+.th-small{
+    max-width: 60px !important;
+}
+.th-max{
+    max-width:150px !important;
+}
+.th-medium{
+    max-width:200px !important;
+}
+.th-larg{
+    max-width: 400px !important;
+}
