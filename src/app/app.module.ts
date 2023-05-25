@@ -6,6 +6,9 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
+import { RouterModule } from '@angular/router';
+
+
 import { StyleClassModule } from 'primeng/styleclass';
 import { AccordionModule } from 'primeng/accordion';
 import { AutoCompleteModule } from 'primeng/autocomplete';
@@ -18,7 +21,9 @@ import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
-import { ChartModule } from 'primeng/chart';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+
 import { CheckboxModule } from 'primeng/checkbox';
 import { ChipModule } from 'primeng/chip';
 import { ChipsModule } from 'primeng/chips';
@@ -98,7 +103,7 @@ import { AppConfigComponent } from './app.config.component';
 import { AppMenuComponent } from './app.menu.component';
 import { AppMenuitemComponent } from './app.menuitem.component';
 
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 
 
 import { CountryService } from './service/countryservice';
@@ -116,7 +121,16 @@ import {SharedService} from "./shared/shared.service";
 import {MessageService} from "primeng/api";
 import { StackedBarChartComponent } from './components/stacked-bar-chart/stacked-bar-chart.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
-import { CandidatsComponent } from './components/candidats/candidats.component';
+
+
+
+import { UploadPageComponent } from './upload-page/upload-page.component';
+import { ChartModule } from 'primeng/chart';
+import { DashboardModule } from './dashboard/dashboard.module';
+
+import { DataTableComponent } from './datatable-page/datatable-page.component';
+
+
 
 
 @NgModule({
@@ -130,6 +144,7 @@ import { CandidatsComponent } from './components/candidats/candidats.component';
         AutoCompleteModule,
         AvatarModule,
         AvatarGroupModule,
+        ChartModule,
         BadgeModule,
         BreadcrumbModule,
         ButtonModule,
@@ -207,6 +222,9 @@ import { CandidatsComponent } from './components/candidats/candidats.component';
         TreeTableModule,
         VirtualScrollerModule,
         StyleClassModule,
+        DialogModule,
+        DashboardModule,
+        RouterModule
     ],
     declarations: [
         AppComponent,
@@ -221,13 +239,22 @@ import { CandidatsComponent } from './components/candidats/candidats.component';
         BienvenueComponent,
         StackedBarChartComponent,
         PieChartComponent,
-        CandidatsComponent,
-
+        DataTableComponent,
+        UploadPageComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
-        CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MenuService, ConfigService, SharedService, MessageService
+        CountryService,
+        CustomerService,
+        EventService,
+        IconService,
+        NodeService,
+        PhotoService,
+        ProductService,
+        MenuService,
+        ConfigService,
+        SharedService,
+        MessageService
     ],
     bootstrap: [AppComponent]
 })
